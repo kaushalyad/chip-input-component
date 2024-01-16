@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.77b51eca.css",
-    "main.js": "/static/js/main.ee26f6f7.js",
-    "static/js/787.b2330d4e.chunk.js": "/static/js/787.b2330d4e.chunk.js",
-    "index.html": "/index.html",
-    "main.77b51eca.css.map": "/static/css/main.77b51eca.css.map",
-    "main.ee26f6f7.js.map": "/static/js/main.ee26f6f7.js.map",
-    "787.b2330d4e.chunk.js.map": "/static/js/787.b2330d4e.chunk.js.map"
+    "main.css": "/chip-input-component/static/css/main.77b51eca.css",
+    "main.js": "/chip-input-component/static/js/main.a783ba03.js",
+    "static/js/787.dcde50e9.chunk.js": "/chip-input-component/static/js/787.dcde50e9.chunk.js",
+    "index.html": "/chip-input-component/index.html",
+    "main.77b51eca.css.map": "/chip-input-component/static/css/main.77b51eca.css.map",
+    "main.a783ba03.js.map": "/chip-input-component/static/js/main.a783ba03.js.map",
+    "787.dcde50e9.chunk.js.map": "/chip-input-component/static/js/787.dcde50e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77b51eca.css",
-    "static/js/main.ee26f6f7.js"
+    "static/js/main.a783ba03.js"
   ]
 }
