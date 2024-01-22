@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chip-input-component/static/css/main.77b51eca.css",
-    "main.js": "/chip-input-component/static/js/main.a783ba03.js",
+    "main.css": "/chip-input-component/static/css/main.9f391c16.css",
+    "main.js": "/chip-input-component/static/js/main.dbd2e790.js",
     "static/js/787.dcde50e9.chunk.js": "/chip-input-component/static/js/787.dcde50e9.chunk.js",
     "index.html": "/chip-input-component/index.html",
-    "main.77b51eca.css.map": "/chip-input-component/static/css/main.77b51eca.css.map",
-    "main.a783ba03.js.map": "/chip-input-component/static/js/main.a783ba03.js.map",
+    "main.9f391c16.css.map": "/chip-input-component/static/css/main.9f391c16.css.map",
+    "main.dbd2e790.js.map": "/chip-input-component/static/js/main.dbd2e790.js.map",
     "787.dcde50e9.chunk.js.map": "/chip-input-component/static/js/787.dcde50e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77b51eca.css",
-    "static/js/main.a783ba03.js"
+    "static/css/main.9f391c16.css",
+    "static/js/main.dbd2e790.js"
   ]
 }
