@@ -1,51 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 const ChipInput = () => {
   const [searchName, setSearchName] = useState(" ");
   const [selectedData, setSelectedData] = useState([]);
-  const [index, setIndex] = useState(0);
   const [inputData, setInputData] = useState([
     {
       _id: 0,
       name: "Kaushal Kumar Yadav",
       email: "kaushalyad321@gmail.com",
-      src: "images/1.jpg",
+      src: "/chip-input-component/images/1.jpg",
     },
     {
       _id: 1,
       name: "Pappu Kumar Yadav",
       email: "pappuyad321@gmail.com",
-      src: "images/1.jpg",
+      src: "/chip-input-component/images/1.jpg",
     },
     {
       _id: 2,
       name: "Nitish Kumar Yadav",
       email: "nitishyad321@gmail.com",
-      src: "images/1.jpg",
+      src: "/chip-input-component/images/1.jpg",
     },
     {
       _id: 3,
       name: "Rahul Kumar Yadav",
       email: "rahulyad321@gmail.com",
-      src: "images/1.jpg",
+      src: "/chip-input-component/images/1.jpg",
     },
     {
       _id: 4,
       name: "Mukesh Kumar Yadav",
       email: "mukeshyad321@gmail.com",
-      src: "images/1.jpg",
+      src: "/chip-input-component/images/1.jpg",
     },
     {
       _id: 5,
       name: "Raushan Kumar Yadav",
       email: "raushanyad321@gmail.com",
-      src: "images/1.jpg",
+      src: "/chip-input-component/images/1.jpg",
     },
     {
       _id: 6,
       name: "Mohan Kumar Yadav",
       email: "mohanyad321@gmail.com",
-      src: "images/1.jpg",
+      src: "/chip-input-component/images/1.jpg",
     },
   ]);
   const removeFromSelectedData = (data) => {
@@ -58,6 +57,7 @@ const ChipInput = () => {
     let updatedInputData = inputData.filter((val) => val._id !== data._id);
     setInputData(updatedInputData);
   };
+  useEffect(() => {}, [searchName]);
   return (
     <div className="w-full text-center py-5 min-h-screen px-5">
       <div className="flex w-[95%] mx-auto  bg-gray-200 border-b-4  border-blue-400 rounded-3xl ">
@@ -70,7 +70,7 @@ const ChipInput = () => {
               >
                 <div>
                   <img
-                    src={`${data.src}`}
+                    src={` ${data.src}`}
                     alt="img"
                     className="w-11  rounded-full "
                   ></img>
@@ -96,15 +96,15 @@ const ChipInput = () => {
           }}
         />
       </div>
-      <div className="flex flex-col w-[40%] mx-auto bg-white max-h-80 overflow-y-scroll rounded-lg">
+      <div className="flex flex-col w-[40%] mx-auto bg-white max-h-80 overflow-y-scroll rounded-2xl">
         {inputData.map((data) => {
           let indexSet = new Set();
           let n = searchName.length;
-          let charArray = data.name;
+          let m = data.name.length;
+          let checkIndex = -1;
           if (n > 0) {
             let i = 0;
-
-            while (i < data.name.length) {
+            while (i < m) {
               if (searchName === data.name.substring(i, i + n)) {
                 indexSet.add(i);
               }
@@ -112,7 +112,6 @@ const ChipInput = () => {
               i++;
             }
           }
-          console.log(indexSet);
           return (
             <div
               key={data._id}
@@ -134,17 +133,22 @@ const ChipInput = () => {
               </div>
               <div className="ml-2">
                 <p className="pt-6">
-                  {data.name
-                    .split("")
-                    .map((char) =>
-                      indexSet.has(index) === true ? (
-                        <span className=" text-red-600">
-                          {data.name.substring(index, setIndex(index + n))}
-                        </span>
-                      ) : (
-                        <span>{char}</span>
-                      )
-                    )}
+                  {data.name.split("").map((item, index) => {
+                    let str = "";
+                    if (indexSet.has(index) === true) {
+                      str += data.name.substring(index, index + n);
+                      checkIndex = index + n - 1;
+                      return <span className="text-red-600">{str}</span>;
+                    } else {
+                      if (checkIndex < index) {
+                        return (
+                          <span key={index}>
+                            {data.name.substring(index, index + 1)}
+                          </span>
+                        );
+                      }
+                    }
+                  })}
                 </p>
               </div>
               <div className="ml-6">
